@@ -1,0 +1,7 @@
+[profile.default]
+src = "assets/finance-manager"
+out = "out"
+libs = ["lib"]
+
+[rpc_endpoints]
+atlantic-testnet = "https://atlantic.dplabs-internal.com"
