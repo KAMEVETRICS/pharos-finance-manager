@@ -71,6 +71,7 @@ cast send <token_in> "approve(address,uint256)" $FINANCE_MANAGER <amount_in_wei>
 cast send $FINANCE_MANAGER "swap(address,address,uint256,uint256,uint24)" <token_in> <token_out> <amount_in_wei> <min_out_wei> <fee_tier> --rpc-url <rpc_url> --private-key $PRIVATE_KEY
 ```
 *(Use fee_tier 3000 as default. Calculate a safe min_out_wei based on 5% slippage if possible, or 0 if estimating is hard)*
+**⚠️ Note:** Swaps require a valid DEX router. If the contract was deployed with a placeholder router, the owner must first call `setSwapRouter` (see Admin commands below) to set a working Uniswap-compatible router address.
 
 ### 5. Batch Pay
 Sends tokens to multiple recipients in a single transaction.

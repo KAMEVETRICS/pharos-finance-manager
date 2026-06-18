@@ -21,8 +21,8 @@ import "./FinanceManager.sol";
 contract DeployFinanceManager is Script {
 
     // ── Update these before deploying ──────────────────────────
-    // Pharos Testnet (688688): TBD — check reference/contracts.md
-    // Pharos Mainnet (14853):  TBD — check reference/contracts.md
+    // Pharos Testnet (688689): TBD — set a live DEX router when available
+    // Pharos Mainnet (1672):   TBD — set a live DEX router when available
     // Using a dummy burn address because the router is not yet available on Atlantic testnet.
     address constant SWAP_ROUTER = 0x000000000000000000000000000000000000dEaD;
 

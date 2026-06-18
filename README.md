@@ -56,6 +56,5 @@ Once the prerequisites are set, you can invoke the skill via an AI agent by usin
 
 ## Documentation
 
-- **[SKILL.md](./SKILL.md)**: The primary entry point for AI agents. Contains the Capability Index and general guidelines.
-- **[Finance Manager Operations](./references/finance-manager.md)**: The detailed command templates for each supported action.
+- **[SKILL.md](./SKILL.md)**: The primary entry point for AI agents. Contains all command templates, contract addresses, and guidelines inline.
 - **[Tokens & Networks](./assets/)**: Address dictionaries for supported networks and tokens.
