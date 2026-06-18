@@ -79,6 +79,18 @@ cast send <token_address> "approve(address,uint256)" $FINANCE_MANAGER <total_wei
 cast send $FINANCE_MANAGER "batchPay(address,address[],uint256[])" <token_address> "[<addr1>,<addr2>]" "[<amt1_wei>,<amt2_wei>]" --rpc-url <rpc_url> --private-key $PRIVATE_KEY
 ```
 
+### 6. Set Swap Router (Owner Only)
+Updates the DEX router address used for swaps. Required before swaps can work on a fresh deployment.
+```bash
+cast send $FINANCE_MANAGER "setSwapRouter(address)" <new_router_address> --rpc-url <rpc_url> --private-key $PRIVATE_KEY
+```
+
+### 7. Recover Token (Owner Only)
+Rescues ERC20 tokens accidentally sent directly to the contract.
+```bash
+cast send $FINANCE_MANAGER "recoverToken(address,uint256)" <token_address> <amount_wei> --rpc-url <rpc_url> --private-key $PRIVATE_KEY
+```
+
 ## Write Operation Pre-checks
 
 For all operations requiring a private key, the Agent MUST:
